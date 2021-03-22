@@ -36,3 +36,30 @@ body {
     width: 100%;
   }
 
+  .bottone {
+    text-align: center;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+#home-banner {
+  background-image: url(/assets/about.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 380px;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+
+.hero-caption {
+  padding-top: 60px;
+}
+ 
+
+
