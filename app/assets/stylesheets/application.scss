@@ -44,6 +44,10 @@ body {
     height: 150px;
   }
 
+  *, *:before, *:after {
+    box-sizing: content-box;
+  }
+
 #home-banner {
   background-image: url(/assets/about.jpg);
   background-size: cover;
@@ -60,6 +64,9 @@ body {
 .hero-caption {
   padding-top: 60px;
 }
+
+
  
+
 
 
