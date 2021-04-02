@@ -48,8 +48,9 @@ body {
     box-sizing: content-box;
   }
 
-#home-banner {
-  background-image: url(/assets/about.jpg);
+
+  #hero {
+    background-image: url(/assets/foto3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,12 +59,14 @@ body {
   min-height: 380px;
   height: auto;
   color: rgba(255,255,255,.9);
-}
+  }
 
 
 .hero-caption {
-  padding-top: 60px;
+  padding-bottom: 90px;
+  color: #000;
 }
+
 
 
  

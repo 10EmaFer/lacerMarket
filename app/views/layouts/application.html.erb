@@ -16,8 +16,7 @@
 
     <%= render "layouts/header" %> 
 
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+  
 
     <main class="container">
       <%= yield %>
@@ -34,5 +33,13 @@
     $('.sidenav').sidenav();
   });
    </script>
+
+   <% flash.each do |type, msg| %>
+      <script>
+        $(document).ready(function(){
+          M.toast({html: "<%=msg%>", classes: 'rounded <%=type%>'});
+        });
+      </script>
+  <% end %>
 
 </html>

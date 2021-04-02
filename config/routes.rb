@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about' => 'pages#about'
 
-  post '/compra/slug', to: 'transaction#create', as: :compra
-  get '/pickuo/:guid', to: 'transaction#pickup', as: :pickup
+  post '/compra/:slug', to: 'transaction#create', as: :compra
+  get '/pickup/:guid', to: 'transaction#pickup', as: :pickup
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

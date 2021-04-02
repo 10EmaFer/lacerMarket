@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <div class="row">
 	<div class="col l6">
 		<%= image_tag @content.cover.url(:medium), class: "responsive-img show-img" %>
@@ -16,37 +16,34 @@
     	Venduto da <%= @content.user.name %>
     </p>
 
-	<p>
-	  <%= @content.descrizione %>
-	</p>
-
 	
-  </div>
-</div>
+	  <p><%= @content.descrizione %></p>
 
+    <% if current_user %>
 
-<% if current_user %>
-
-<%= form_tag compra_path(slug: @content.slug) do %>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="<%= @content.titolo %>"
-                  data-amount="<%= @content.price %>"
-                  data-name="LacerMarket"
-                  data-email="<%= current_user.email %>"
-                  data-currency="eur"
-                  data-locale="auto">
-          </script>
-        <% end %>
-
+  <%= form_tag compra_path(slug: @content.slug) do %>
+       <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="<%= @content.titolo %>"
+          data-amount="<%= (@content.price * 100).floor %>"
+          data-name="lacerMarket"
+          data-email="<%= current_user.email %>"
+          data-currency="eur"
+          data-locale="auto">
+        </script>
+      <% end %>
 
   <% else %>
   <p>Fai <%= link_to "Log In",  new_user_session_path %> Oppure <%= link_to "Registrati",  new_user_registration_path %> Per poter acquistare questo contenuto</p>
   
-  <% end %>      
+  <% end %> 
 
+  </div>
+</div>
 
+     
 <% if @content.user == current_user %>
 <%= link_to 'Edit', edit_content_path(@content) %> |
 <% end %>
-<%= link_to 'Back', contents_path %>
+<%= link_to 'Torna ai contenuti', contents_path %>
