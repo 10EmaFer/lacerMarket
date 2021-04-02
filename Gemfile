@@ -19,6 +19,8 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'stripe'
 gem 'aasm'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
 
 
 
