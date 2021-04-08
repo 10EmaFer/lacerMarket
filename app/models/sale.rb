@@ -1,6 +1,6 @@
 class Sale < ApplicationRecord
 
-	before_cretae :generate_guid
+	before_create :generate_guid
 	belong_to :content
 
 	  include AASM
