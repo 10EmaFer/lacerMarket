@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'materialize-sass', '~> 1.0.0'
 gem 'devise'
-gem "paperclip", "~> 6.0.0"
+gem "paperclip", "~> 5.3.0"
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize'
 gem 'friendly_id', '~> 5.4.0'
