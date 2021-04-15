@@ -15,8 +15,4 @@ ActiveStorage.start()
 
 //= require materialize
 
-<script>
-$(document).ready(function(){
-    $('.parallax').parallax();
-  });
-</script>
+
