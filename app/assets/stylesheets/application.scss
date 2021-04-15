@@ -1,18 +1,29 @@
 @import "materialize";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Raleway', sans-serif;
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2em
   }
 
   main {
     flex: 1 0 auto;
+  }
+
+  .home-subtitle {
+    margin: 5% 0 5% 0;
   }
 
   .btn-device {
@@ -43,29 +54,25 @@ body {
   .card-image {
     height: 150px;
   }
-
-  *, *:before, *:after {
-    box-sizing: content-box;
-  }
-
-
-  #hero {
-    background-image: url(/assets/foto3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-  min-height: 380px;
-  height: auto;
-  color: rgba(255,255,255,.9);
-  }
-
-
-.hero-caption {
-  padding-bottom: 90px;
-  color: #000;
+.parallax-container .parallax img {
+  padding-bottom: 300px;
 }
+
+.fab-social {
+  padding: 0 15px;
+}
+
+@media (max-width: 600px){
+  .fa-social {
+    padding: 0 20%;
+  }
+  .row .col.s4 {
+    width: unset;
+  }
+}
+
+
+
 
 
 

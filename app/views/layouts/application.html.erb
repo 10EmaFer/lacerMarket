@@ -9,12 +9,17 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   </head>
 
   <body>
 
     <%= render "layouts/header" %> 
+
+    <%= render 'pages/slider' if action_name == 'home' %>
 
   
 
@@ -33,6 +38,14 @@
     $('.sidenav').sidenav();
   });
    </script>
+
+
+<script>
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+
 
    <% flash.each do |type, msg| %>
       <script>

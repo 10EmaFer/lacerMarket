@@ -23,6 +23,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
 gem 'mimemagic', '~> 0.3.10'
 gem 'aws-sdk'
+gem 'font-awesome-sass'
 
 
 

@@ -8,8 +8,15 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
 //= require materialize
+
+<script>
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
