@@ -1,3 +1,4 @@
+<h1 class="center">Dashboard</h1>
 <div class="row">
     <div class="col s12">
       <ul class="tabs">
@@ -26,7 +27,8 @@
         </tr>
         <% end %>
         </tbody>
-    </table> 
+    </table>
+    <br><br> 
     <h4>Acquisti</h4>
      <table>
       <thead>
@@ -43,7 +45,7 @@
           <th><%= link_to purchased.content.titolo, pickup_path(purchased.guid) %></th>
           <th><%= number_to_currency(purchased.amount / 100) %></th>
           <th><%= time_ago_in_words(purchased.created_at) %></th>
-          <th>purchased.email_venditore</th>
+          <th><%= purchased.email_venditore %></th>
         </tr>
         <% end %>
         </tbody>
@@ -68,7 +70,7 @@
           <tr>
           <th><%= link_to content.titolo, content_path(content) %></th>
           <th><%= content.price %></th>
-          <th><%= content.created_at %></th>
+          <th><%= time_ago_in_words(content.created_at) %> fa</th>
           <th>
             <%= link_to "Modifica", edit_content_path(content) %> |
             <%= link_to "Elimina", content, method: :delete, data: { confirm: 'Sei sicuro di voler cancellare il contenuto?' } %>

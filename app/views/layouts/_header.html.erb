@@ -24,21 +24,17 @@
 
               </ul>
           <ul class="sidenav" id="mobile-demo">
+            <li><%= link_to 'Vendi contenuto', new_content_path %></li>
              <% if user_signed_in? %>
                     <li><%= link_to "dashboard", dashboard_path %></li>
                     <li><%= link_to "impostazioni", edit_user_registration_path %></li>
                     <li class="divider"></li>
                     <li><%= link_to "Log Out",  destroy_user_session_path, method: :delete %></li>
-                 <li><%= link_to 'Vendi contenuto', new_content_path %></li>
-                  
-
-                 <li><%= link_to 'Vendi contenuto', new_content_path %></li>
-                 <li><%= link_to "Log Out",  destroy_user_session_path, method: :delete %></li>
+                 
 
                 <% else %>
-                <li><%= link_to "Log In",  new_user_session_path %></li>
-                <li><%= link_to "registrazione",  new_user_registration_path %></li>
-
+                 <li><%= link_to "Log In",  new_user_session_path %></li>
+                 <li><%= link_to "registrazione",  new_user_registration_path %></li>
                 <% end %>
           </ul>
          </div>

@@ -32,9 +32,9 @@ class Sale < ApplicationRecord
 	    			amount: self.amount,
 	    			currency: "eur",
 	    			card: self.stripe_token,
-	    			description: "vendita di un contenuto")
-
-	    		self.update(strpe_id: charge.id)
+	    			description: "vendita di un contenuto"
+	    			)
+	    		self.update(stripe_id: charge.id)
 	    		self.complete!
 	   
 

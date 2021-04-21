@@ -1,4 +1,5 @@
-class TransactionController < ApplicationController
+	class TransactionsController < ApplicationController
+
 	def create
 		content = Content.find_by!(slug: params[:slug])
 		sale = content.sales.create(

@@ -1,4 +1,4 @@
-
+<div class="content-show">
 <div class="row">
 	<div class="col l6">
 		<%= image_tag @content.cover.url(:medium), class: "responsive-img show-img" %>
@@ -41,7 +41,7 @@
 
   </div>
 </div>
-
+</div>
      
 <% if @content.user == current_user %>
 <%= link_to 'Edit', edit_content_path(@content) %> |
